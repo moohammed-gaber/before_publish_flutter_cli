@@ -1,1 +1,6 @@
-{"name":"My Awesome App","icon":"assets/images/logooo.png","splash":"assets/images/splash.png","package":"com.simple"}
+{
+  "name": "My Awesome App",
+  "icon": "assets/images/logo.png",
+  "splash": "assets/images/splash.png",
+  "package": "com.simple"
+}
