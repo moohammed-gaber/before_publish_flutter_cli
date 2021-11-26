@@ -8,18 +8,14 @@
 dart pub global activate before_publish_cli
 ```
 
-### The only command ..
+### The only command :
 
 ```shell
-  before_publish
+before_publish
 ```
-
 # In Action
-
 ![alt text](https://github.com/moohammed-gaber/before_publish_cli/blob/master/assets/overview.gif?raw=true)
-
 # In details
-
 - The Script will create file that located in assets folder called before_publish.json with default configuration.
 
 `{
@@ -27,9 +23,8 @@ dart pub global activate before_publish_cli
  
 - Edit the .json file with your custom configurations.
 - type "1" and click enter.
+ 
 
   
-
 ## Buy me a coffee
-
 <a href="https://www.buymeacoffee.com/mogaber" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
