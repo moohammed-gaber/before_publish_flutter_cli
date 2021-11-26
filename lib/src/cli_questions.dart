@@ -9,6 +9,5 @@ class CliQuestions {
         'Go on',
       ],
     );
-
   }
 }

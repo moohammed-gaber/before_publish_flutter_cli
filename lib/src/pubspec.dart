@@ -1,11 +1,10 @@
-import 'dart:convert';
-import 'dart:io';
-import 'package:before_publish_cli/src/package_names.dart';
+
 import 'package:before_publish_cli/src/configration.dart';
-import 'package:process_run/shell.dart';
 import 'package:before_publish_cli/src/flutter_lints_pub_client.dart';
+import 'package:before_publish_cli/src/package_names.dart';
 import 'package:plain_optional/plain_optional.dart';
 import 'package:pubspec_yaml/pubspec_yaml.dart';
+
 import 'files_handler.dart';
 
 class Pubspec {

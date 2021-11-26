@@ -1,8 +1,6 @@
-import 'dart:io';
 
 import 'package:before_publish_cli/src/cli_questions.dart';
 import 'package:before_publish_cli/src/configration.dart';
-import 'package:before_publish_cli/src/failures.dart';
 import 'package:before_publish_cli/src/files_handler.dart';
 import 'package:before_publish_cli/src/pubspec.dart';
 import 'package:before_publish_cli/src/shell.dart';
@@ -24,7 +22,9 @@ class Mediator {
       await shellRunner.runAllScripts(configuration.package);
     });
     final newConfiguration = await filesHandler.readConfiguration();
-    final Pubspec pubspec = Pubspec(newConfiguration.getOrElse(() {return Configuration.defaultConfig();}));
+    final Pubspec pubspec = Pubspec(newConfiguration.getOrElse(() {
+      return Configuration.defaultConfig();
+    }));
     final Configuration configuration = pubspec.configuration;
     await pubspec.updateFile();
     await shellRunner.runAllScripts(configuration.package);

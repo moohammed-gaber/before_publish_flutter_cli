@@ -1,6 +1,6 @@
 [![Pub](https://img.shields.io/pub/v/before_publish_cli.svg)](https://pub.dev/packages/before_publish_cli)
 
-### Change Application's name, package name, icon and Splash with simple command.
+### Change Application's name, package name, icon and Splash in one shot by one Command on Android & IOS.
 
 ### Installing
 

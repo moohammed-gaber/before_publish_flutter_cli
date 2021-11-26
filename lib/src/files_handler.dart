@@ -13,7 +13,8 @@ class FilesHandler {
     try {
       final file = File('./assets/before_publish.json').readAsStringSync();
       return right(configurationFromJson(file));
-    } /*on FileSystemException catch (e) {
+    }
+    /*on FileSystemException catch (e) {
     }*/
     catch (e) {
       return left(NotFoundFile());

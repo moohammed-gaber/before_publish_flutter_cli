@@ -2,9 +2,6 @@
 //
 //     final configuration = configurationFromJson(jsonString);
 
-import 'dart:io';
-
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 Configuration configurationFromJson(String str) =>

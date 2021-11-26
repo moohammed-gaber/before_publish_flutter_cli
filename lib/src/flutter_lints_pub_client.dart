@@ -7,8 +7,8 @@ class FlutterLintsPubClient {
   FlutterLintsPubClient();
 
   Future<String> latestStableVersion(String packageName) async {
-  final documentation = await client.documentation(packageName);
-  final latestStableVersion = documentation.latestStableVersion;
-  return latestStableVersion;
+    final documentation = await client.documentation(packageName);
+    final latestStableVersion = documentation.latestStableVersion;
+    return latestStableVersion;
   }
 }

@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="75f2a3d0-1473-4514-b54b-c9d10258604a" name="Changes" comment="..">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cli_questions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cli_questions.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/configration.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/configration.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/failures.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/failures.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/files_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/files_handler.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/flutter_lints_pub_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter_lints_pub_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/mediator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/mediator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/pubspec.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/pubspec.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637955816263</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="..">
+      <created>1637956035078</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637956035078</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

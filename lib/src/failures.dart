@@ -1,10 +1,5 @@
-class Failure {
+class Failure {}
 
-}
-class Exception{
+class Exception {}
 
-
-}
-class NotFoundFile implements Exception{
-
-}
+class NotFoundFile implements Exception {}
