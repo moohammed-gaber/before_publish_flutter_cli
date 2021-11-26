@@ -4,14 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75f2a3d0-1473-4514-b54b-c9d10258604a" name="Changes" comment="" />
+    <list default="true" id="75f2a3d0-1473-4514-b54b-c9d10258604a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bin/before_publish.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/cli_questions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/configration.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/failures.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/files_handler.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/mediator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/package_names.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/shell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sample.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/aog.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/analysis_options.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/custom_analysis_options.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/flutter_lints_pub_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter_lints_pub_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/pubspec.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/pubspec.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/version/version.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="dart_class " />
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/lib/src/pubspec.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/flutter_lints_pub_client.dart" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pubspec.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/bin/before_publish.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pubspec.lock" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/vcs.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.dart_tool/package_config.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21SSkFRbRS6dciK4q9qpo5tlUuI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -22,10 +67,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JSON" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../before_publish" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\flutter\analysis_options_cli_generator-master\bin" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="before_publish.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/bin/before_publish.dart" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,9 +95,32 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/before_publish.dart</url>
+          <line>9</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

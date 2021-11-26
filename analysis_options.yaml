@@ -64,7 +64,7 @@ linter:
     prefer_final_fields: true
     file_names: true
     no_runtimeType_toString: true
-    lines_longer_than_80_chars: true
+#    lines_longer_than_80_chars: true
     unawaited_futures: true
     one_member_abstracts: true
     only_throw_errors: true

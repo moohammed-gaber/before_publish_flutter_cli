@@ -1,55 +1,55 @@
+import 'dart:convert';
 import 'dart:io';
+import 'package:before_publish_cli/src/package_names.dart';
+import 'package:before_publish_cli/src/configration.dart';
 import 'package:process_run/shell.dart';
-
-import 'package:analysis_options_cli_generator/src/flutter_lints_pub_client.dart';
+import 'package:before_publish_cli/src/flutter_lints_pub_client.dart';
 import 'package:plain_optional/plain_optional.dart';
 import 'package:pubspec_yaml/pubspec_yaml.dart';
+import 'files_handler.dart';
 
 class Pubspec {
-  static String flutterLintsPackageName = 'flutter_lints';
+  final flutterLintsPubClient = FlutterLintsPubClient();
+  final filesHandler = FilesHandler();
 
-  static PubspecYaml _readFile() {
-    return File('./pubspec.yaml').readAsStringSync().toPubspecYaml();
-  }
+  final Configuration configuration;
 
-  static bool get haveAnalysisOptionDependency => _readFile()
-      .devDependencies
-      .any((element) => element.package() == flutterLintsPackageName);
+  Pubspec(this.configuration);
 
-  static Future<void> _writeNewFile() async {
+  Future<void> updateFile() async {
     final updatedFile = await _getUpdatedFile();
-
-    File('./pubspec.yaml').writeAsStringSync(updatedFile.toYamlString());
+    await filesHandler.writePubspecYaml(updatedFile.toYamlString());
   }
 
-  static Future<void> updateFile() async {
-    // if (!haveAnalysisOptionDependency) {
-    await _writeNewFile();
-    await _runPupGet();
-    // }
+  Future<PackageDependencySpec> getPackageDependencySpec(
+      String packageName) async {
+    return PackageDependencySpec.hosted(HostedPackageDependencySpec(
+      package: packageName,
+      version: Optional(
+          '^${await flutterLintsPubClient.latestStableVersion(packageName)}'),
+    ));
   }
 
-  static Future<void> _runPupGet() async {
-    final shell = Shell();
+  Future<PubspecYaml> _getUpdatedFile() async {
+    List<Future<PackageDependencySpec>> dependecies = [];
+    final packages = PackageNames.packages;
+    for (int i = 0; i < packages.length; i++) {
+      dependecies.add(getPackageDependencySpec(packages[i]));
+    }
+    final newDependecies = await Future.wait(dependecies);
+    final newYamlFile = filesHandler.readPubspecYaml().copyWith(
+        devDependencies: newDependecies.cast<PackageDependencySpec>(),
+        customFields: {
+          'flutter_icons': {
+            'android': true,
+            'remove_alpha_ios': true,
+            'ios': true,
+            'image_path': configuration.icon
+          },
+          'flutter_native_splash': {'background_image': configuration.splash},
+          'flutter_app_name': {'name': configuration.name}
+        });
 
-    await shell.run(
-      'flutter pub get',
-    );
-  }
-
-  static Future<PubspecYaml> _getUpdatedFile() async {
-    final newDevDependencies = _readFile().devDependencies.toList();
-    newDevDependencies.add(
-      PackageDependencySpec.hosted(
-        HostedPackageDependencySpec(
-          package: flutterLintsPackageName,
-          version:
-              Optional('^${await FlutterLintsPubClient.latestStableVersion}'),
-        ),
-      ),
-    );
-    final newYamlFile =
-        _readFile().copyWith(devDependencies: newDevDependencies);
     return newYamlFile;
   }
 }

@@ -1,16 +1,11 @@
-[![Pub](https://img.shields.io/pub/v/analysis_options_cli_generator.svg)](https://pub.dev/packages/analysis_options_cli_generator)
+[![Pub](https://img.shields.io/pub/v/before_publish_cli.svg)](https://pub.dev/packages/before_publish_cli)
 
-### What will this tool do for me?
+### Change Application's name, package name, icon and Splash with one command
 
-**1- Generate analysis_options.yaml file for you which includes the best 100 analysis rules over there, with
-ignoring linting analysis for freezed, get_it and json_serializable generated files.**
-
-**2- Add the latest version of flutter_lints package** 
-
-**3- Run pub get command**
+*
 ### Installing
 ```shell
-dart pub global activate analysis_options_cli_generator
+dart pub global activate before_publish_cli
 ```
 ### The only command over there ..
 ```shell
@@ -18,7 +13,7 @@ dart pub global activate analysis_options_cli_generator
 ```
 to run any dart script you need to add _/.pub-cache/bin_ to your path, you may need also _$FLUTTER_HOME/bin/cache/dart-sdk/bin_ _FLUTTER_HOME/.pub-cache/bin_
 
-![alt text](https://github.com/MoGaaber/analysis_options_cli_generator/blob/master/assets/sample.gif?raw=true)
+![alt text](https://github.com/MoGaaber/before_publish_cli/blob/master/assets/sample.gif?raw=true)
 
 ##### This command will give you two options :-
 ##### - _Basic_: default rules
