@@ -1,5 +1,5 @@
 name: before_publish_cli
-version: 1.0.0
+version: 1.0.1
 description: Change Application's name, package name, icon and Splash in one shot.
 repository: https://github.com/moohammed-gaber/before_publish_flutter_cli
 executables:

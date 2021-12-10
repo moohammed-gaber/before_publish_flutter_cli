@@ -1,4 +1,3 @@
-
 import 'package:before_publish_cli/src/configration.dart';
 import 'package:before_publish_cli/src/flutter_lints_pub_client.dart';
 import 'package:before_publish_cli/src/package_names.dart';
@@ -36,9 +35,11 @@ class Pubspec {
       dependecies.add(getPackageDependencySpec(packages[i]));
     }
     final newDependecies = await Future.wait(dependecies);
-    final newYamlFile = filesHandler.readPubspecYaml().copyWith(
+    final oldYamlFile = filesHandler.readPubspecYaml();
+    final newYamlFile = oldYamlFile.copyWith(
         devDependencies: newDependecies.cast<PackageDependencySpec>(),
         customFields: {
+          ...oldYamlFile.customFields,
           'flutter_icons': {
             'android': true,
             'remove_alpha_ios': true,
