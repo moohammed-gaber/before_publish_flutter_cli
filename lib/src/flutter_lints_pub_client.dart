@@ -1,12 +1,12 @@
 import 'package:pub_api_client/pub_api_client.dart';
 
 //
-class FlutterLintsPubClient {
+class FlutterPubClient {
   final client = PubClient();
 
-  FlutterLintsPubClient();
+  FlutterPubClient();
 
-  Future<String> latestStableVersion(String packageName) async {
+  Future<String> getLatestStableVersion(String packageName) async {
     final documentation = await client.documentation(packageName);
     final latestStableVersion = documentation.latestStableVersion;
     return latestStableVersion;

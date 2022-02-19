@@ -7,7 +7,7 @@ import 'package:pubspec_yaml/pubspec_yaml.dart';
 import 'files_handler.dart';
 
 class Pubspec {
-  final flutterLintsPubClient = FlutterLintsPubClient();
+  final flutterLintsPubClient = FlutterPubClient();
   final filesHandler = FilesHandler();
 
   final Configuration configuration;
@@ -24,7 +24,7 @@ class Pubspec {
     return PackageDependencySpec.hosted(HostedPackageDependencySpec(
       package: packageName,
       version: Optional(
-          '^${await flutterLintsPubClient.latestStableVersion(packageName)}'),
+          '^${await flutterLintsPubClient.getLatestStableVersion(packageName)}'),
     ));
   }
 
@@ -34,21 +34,23 @@ class Pubspec {
     for (int i = 0; i < packages.length; i++) {
       dependecies.add(getPackageDependencySpec(packages[i]));
     }
-    final newDependecies = await Future.wait(dependecies);
-    final oldYamlFile = filesHandler.readPubspecYaml();
-    final newYamlFile = oldYamlFile.copyWith(
-        devDependencies: newDependecies.cast<PackageDependencySpec>(),
-        customFields: {
-          ...oldYamlFile.customFields,
-          'flutter_icons': {
-            'android': true,
-            'remove_alpha_ios': true,
-            'ios': true,
-            'image_path': configuration.icon
-          },
-          'flutter_native_splash': {'background_image': configuration.splash},
-          'flutter_app_name': {'name': configuration.name}
-        });
+    final newDevDependecies = await Future.wait(dependecies);
+    var oldYamlFile = filesHandler.readPubspecYaml();
+
+    final newYamlFile = oldYamlFile.copyWith(devDependencies: [
+      ...oldYamlFile.devDependencies,
+      ...newDevDependecies.cast<PackageDependencySpec>()
+    ], customFields: {
+      ...oldYamlFile.customFields,
+      'flutter_icons': {
+        'android': true,
+        'remove_alpha_ios': true,
+        'ios': true,
+        'image_path': configuration.icon
+      },
+      'flutter_native_splash': {'background_image': configuration.splash},
+      'flutter_app_name': {'name': configuration.name}
+    });
 
     return newYamlFile;
   }
